@@ -12,4 +12,9 @@
   <br>
   <br>
 <img src="https://github.com/Johnrosa59/Convert-money-I-do/blob/master/img/readme.png" alt="Converor-de-moedas">
+  
+  <br>
+  <br>
+  
+  <img src="https://github.com/Johnrosa59/Convert-money-I-do/blob/master/img/readme2.png alt="Conversor-de-moedas">
 
