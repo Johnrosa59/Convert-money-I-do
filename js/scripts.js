@@ -1,6 +1,4 @@
-const dollar = 5.29
-const euro = 5.65
-const bitcoin = 87367.74
+
 const button = document.getElementById('button-converter')
 const realText = document.getElementById('real-text')
 const selectCurrency = document.getElementById('select-currency')
@@ -8,8 +6,17 @@ const changeFlag = document.getElementById('flag')
 const textCurrency = document.getElementById('text-currency')
 const moneyConvert = document.getElementById('money-changed')
 
-const convertMoney = () => {
+
+
+const convertMoney = async () => {
     const input = document.getElementById('input-value').value
+
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+
+    const dollar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const bitcoin = data.BTCBRL.high
 
     if (selectCurrency.value === 'US$ Dólar americano') {
 
@@ -60,5 +67,3 @@ const changedConvert = () => {
 
 button.addEventListener('click', convertMoney)
 selectCurrency.addEventListener('change', changedConvert)
-
-console.log(test)
